@@ -1,5 +1,5 @@
 <?php 
-
+// load stylesheets
 function load_css() {
 
     wp_register_style('bootstrap',  get_template_directory_uri() . '/css/bootstrap.min.css', array(), false, 'all' ); 
@@ -10,12 +10,15 @@ function load_css() {
         @media screen m.m = för att ha alla = all
     */
     wp_enqueue_style('bootstrap'); // namnet som vi gav
+
+    wp_register_style('maincss',  get_template_directory_uri() . '/css/main.css', array(), false, 'all' ); 
+    wp_enqueue_style('maincss'); 
 }
 
 // hook function to header
 add_action('wp_enqueue_scripts', 'load_css');
 
-
+// load stylesheets
 function load_js() {
     wp_enqueue_script('jquery');
     wp_register_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', 'jquery', false, true );
@@ -25,3 +28,15 @@ function load_js() {
 }
 // hook function to header
 add_action('wp_enqueue_scripts', 'load_js'); // load.js är namnet på funktionen.
+
+// load theme options
+add_theme_support('menus');
+
+
+//menus
+register_nav_menus(
+    array(
+        'top-menu' => 'Top Menu Location',
+        'mobile-menu' => 'Mobile Menu Location',
+    )
+);
