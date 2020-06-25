@@ -17,7 +17,7 @@
 
     <?php the_content(); ?>
 
-    <?php var_dump(get_the_tags()); ?>
+ 
     <?php 
     $tags = get_the_tags();
     foreach($tags as $tag):?>
