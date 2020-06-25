@@ -64,3 +64,8 @@ header .top-bar .sub-menu li .sub-menu{
 header .top-bar .sub-menu li .sub-menu a {
     display: block;
 }
+
+.next_prev > a{
+    text-decoration: none;
+    color: #222;
+}

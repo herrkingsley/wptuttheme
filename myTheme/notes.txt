@@ -1,0 +1,24 @@
+
+
+
+Archive.php är samlingssidan för alla blogginlägg.
+
+<?php previous_post_link(); ?>
+Används för att ge tidigare och nyare inlägg.
+Hur många som visas styr man via dashbord.
+
+Vill man ha siffror så finns det beskriviet i wordpressboken och 
+https://youtu.be/WbGlhhRLEbA?t=676
+
+
+För att sortera post under olika kategorier kan man göra
+en ny category sida(archive) tex category-test.php
+Om man ger den samma innehåll som archive.php kommer den publiceras 
+med post som har kategorin "test".
+
+
+
+
+// PLUGINS
+
+Duplicate posts är en bra plugin för att dublicera content.

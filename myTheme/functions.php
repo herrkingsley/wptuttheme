@@ -29,14 +29,35 @@ function load_js() {
 // hook function to header
 add_action('wp_enqueue_scripts', 'load_js'); // load.js är namnet på funktionen.
 
-// load theme options
+
+
+
+
+
+
+
+// -------------- load theme options
 add_theme_support('menus');
 
 
-//menus
+// --------------  menus
 register_nav_menus(
     array(
         'top-menu' => 'Top Menu Location',
         'mobile-menu' => 'Mobile Menu Location',
     )
 );
+
+// ------------------- Mods
+/**
+ * Filter the excerpt "read more" string.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function wpdocs_excerpt_more( $more ) {
+    return '...';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+
