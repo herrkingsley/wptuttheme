@@ -13,6 +13,8 @@ function load_css() {
 
     wp_register_style('maincss',  get_template_directory_uri() . '/css/main.css', array(), false, 'all' ); 
     wp_enqueue_style('maincss'); 
+    wp_register_style('sass',  get_template_directory_uri() . '/dist/app.css', array(), 1, 'all' ); 
+    wp_enqueue_style('sass'); 
 }
 
 // hook function to header
